@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>درباره نهج البلاغه | گردآوری سید رضی</title>
+  <meta name="description" content="آشنایی با کتاب شریف نهج البلاغه، گردآورنده سید رضی، و ساختار خطبه‌ها، نامه‌ها و کلمات قصار.">
+  <meta name="keywords" content="درباره نهج البلاغه, سید رضی, تاریخ نهج البلاغه">
+  <meta name="author" content="نهج البلاغه">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="language" content="Persian">
+  <meta name="theme-color" content="#0b1526">
+  <link rel="canonical" href="https://www.nahj-al-balagha.ir/about.html">
+  <link rel="alternate" hreflang="fa" href="https://www.nahj-al-balagha.ir/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.nahj-al-balagha.ir/about.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="نهج البلاغه">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:title" content="درباره نهج البلاغه | گردآوری سید رضی">
+  <meta property="og:description" content="آشنایی با کتاب شریف نهج البلاغه، گردآورنده سید رضی، و ساختار خطبه‌ها، نامه‌ها و کلمات قصار.">
+  <meta property="og:url" content="https://www.nahj-al-balagha.ir/about.html">
+  <meta property="og:image" content="https://www.nahj-al-balagha.ir/og-cover.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="درباره نهج البلاغه | گردآوری سید رضی">
+  <meta name="twitter:description" content="آشنایی با کتاب شریف نهج البلاغه، گردآورنده سید رضی، و ساختار خطبه‌ها، نامه‌ها و کلمات قصار.">
+  <meta name="twitter:image" content="https://www.nahj-al-balagha.ir/og-cover.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-fa">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand"><span class="brand-icon">ن</span> نهج البلاغه</a>
+      <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">خانه</a></li>
+        <li><a href="khutbah.html">خطبه‌ها</a></li>
+        <li><a href="rasail.html">نامه‌ها</a></li>
+        <li><a href="quote/1.html">کلمات قصار</a></li>
+        <li><a href="about.html" class="active">درباره</a></li>
+      </ul>
+      <div class="lang-switch"><span class="on" data-lang="fa">FA</span><span data-lang="en">EN</span></div>
+    </div>
+  </header>
+
+  <section class="page-hero" style="padding:110px 24px 50px">
+    <h1>درباره نهج البلاغه</h1>
+    <div class="sub">About Nahj al-Balagha</div>
+  </section>
+
+  <div class="main" style="max-width:720px">
+    <div class="detail-main" style="padding:32px">
+      <p style="margin-bottom:16px;line-height:2">نهج‌البلاغه به معنای «راه بلاغت» است؛ گزیده‌ای از خطبه‌ها، نامه‌ها و سخنان کوتاه امیرالمؤمنین علی بن ابی‌طالب علیه‌السلام که سید رضی در قرن چهارم هجری گردآوری کرده است.</p>
+      <p style="margin-bottom:16px;line-height:2"><strong>سه بخش اصلی:</strong></p>
+      <p style="margin-bottom:8px">• <strong>خطبه‌ها</strong> — حدود ۲۴۱ خطبه</p>
+      <p style="margin-bottom:8px">• <strong>نامه‌ها</strong> — حدود ۷۹ نامه و عهدنامه</p>
+      <p style="margin-bottom:16px">• <strong>کلمات قصار</strong> — حدود ۴۸۰ حکمت</p>
+      <p style="line-height:2">این کتاب پس از قرآن کریم از مهم‌ترین آثار ادبی و فکری جهان اسلام است و به بیش از بیست زبان ترجمه شده است.</p>
+    </div>
+  </div>
+  <footer><strong>نهج البلاغه</strong></footer>
+
+<script>
+(function(){
+  function applyLang(lang){
+    document.body.classList.remove('lang-fa','lang-en');
+    document.body.classList.add(lang === 'en' ? 'lang-en' : 'lang-fa');
+    document.querySelectorAll('.lang-switch span[data-lang]').forEach(s=>{
+      s.classList.toggle('on', s.dataset.lang === lang);
+    });
+    try { localStorage.setItem('nahj-lang', lang); } catch(e){}
+  }
+  window.setLang = function(lang){ applyLang(lang); };
+  var saved = 'fa';
+  try { saved = localStorage.getItem('nahj-lang') || 'fa'; } catch(e){}
+  applyLang(saved);
+  document.querySelectorAll('.lang-switch span[data-lang]').forEach(s=>{
+    s.addEventListener('click', function(){ setLang(this.dataset.lang); });
+  });
+})();
+</script>
+
+</body>
+</html>
