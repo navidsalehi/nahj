@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-16T11:50:00.000Z",
+  "title": "Design System: نهج البلاغه | Imam Ali",
+  "extensions": {
+    "colorMeta": {
+      "manuscript-navy": {
+        "role": "primary",
+        "displayName": "Manuscript Navy",
+        "canonical": "#0b1526",
+        "tonalRamp": ["#050a12", "#0b1526", "#111d33", "#1a2a45", "#2c4060", "#5a6f8c", "#9aabc0", "#d6dde8"]
+      },
+      "lamp-gold": {
+        "role": "primary",
+        "displayName": "Lamp Gold",
+        "canonical": "#c9a84c",
+        "tonalRamp": ["#4a3c14", "#7a6428", "#a68a3a", "#c9a84c", "#d4bc70", "#e0d094", "#e8d5a3", "#f5edd8"]
+      },
+      "parchment-cream": {
+        "role": "neutral",
+        "displayName": "Parchment Cream",
+        "canonical": "#f7f4ef",
+        "tonalRamp": ["#2a2620", "#5c554a", "#8a8274", "#b8b0a2", "#d9d3c8", "#ebe6de", "#f7f4ef", "#fcfbf9"]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#1a1a1a", "#4a4a4a", "#8a8a8a", "#c4c4c4", "#e2e8f0", "#f0f0f0", "#f7f4ef", "#ffffff"]
+      },
+      "near-black-ink": {
+        "role": "neutral",
+        "displayName": "Near-Black Ink",
+        "canonical": "#1a1a1a",
+        "tonalRamp": ["#0a0a0a", "#1a1a1a", "#3d4654", "#4a5568", "#718096", "#a0aec0", "#e2e8f0", "#f7f4ef"]
+      },
+      "margin-slate": {
+        "role": "neutral",
+        "displayName": "Margin Slate",
+        "canonical": "#4a5568",
+        "tonalRamp": ["#1a1a1a", "#2d3748", "#3d4654", "#4a5568", "#718096", "#a0aec0", "#cbd5e0", "#e2e8f0"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero and page-hero titles in Amiri on navy." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings in Vazirmatn." },
+      "title": { "displayName": "Title", "purpose": "Card and list titles." },
+      "body": { "displayName": "Body", "purpose": "UI chrome and Persian prose." },
+      "arabic-body": { "displayName": "Arabic body", "purpose": "Literary Arabic in Amiri with generous line-height." },
+      "label": { "displayName": "Label", "purpose": "Badges, numbers, functional letter-block labels." }
+    },
+    "shadows": [
+      {
+        "name": "card-ambient",
+        "value": "0 4px 24px rgba(11, 21, 38, 0.08)",
+        "purpose": "Optional rest shadow on white cards; prefer border when possible."
+      },
+      {
+        "name": "card-hover",
+        "value": "0 8px 32px rgba(11, 21, 38, 0.12)",
+        "purpose": "Interaction lift only."
+      },
+      {
+        "name": "chrome",
+        "value": "0 2px 12px rgba(0, 0, 0, 0.15)",
+        "purpose": "Sticky topbar separation."
+      },
+      {
+        "name": "focus-ring",
+        "value": "0 0 0 3px rgba(201, 168, 76, 0.45)",
+        "purpose": "Keyboard focus companion to 2px gold outline."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-state",
+        "value": "0.2s ease",
+        "purpose": "Default hover/focus transitions for buttons and cards."
+      },
+      {
+        "name": "ease-menu",
+        "value": "0.2s ease",
+        "purpose": "Hamburger icon morph."
+      }
+    ],
+    "breakpoints": [
+      { "name": "nav-collapse", "value": "800px" },
+      { "name": "hikam-2col", "value": "768px" },
+      { "name": "grid-1col", "value": "720px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary CTA",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Hero primary action — Lamp Gold fill on navy text.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">شروع کنید</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; min-height: 44px; padding: 0.8rem 1.55rem; background: #c9a84c; color: #0b1526; font-family: Vazirmatn, system-ui, sans-serif; font-weight: 700; font-size: 1rem; border: none; border-radius: 10px; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; } .ds-btn-primary:hover { background: #e8d5a3; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid #c9a84c; outline-offset: 3px; box-shadow: 0 0 0 3px rgba(201,168,76,0.45); }"
+    },
+    {
+      "name": "Chrome button",
+      "kind": "button",
+      "refersTo": "button-chrome",
+      "description": "Navy fill with gold-light text for letter nav primary.",
+      "html": "<button class=\"ds-btn-chrome\" type=\"button\">بعدی</button>",
+      "css": ".ds-btn-chrome { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0.65rem 1rem; background: #0b1526; color: #e8d5a3; font-family: Vazirmatn, system-ui, sans-serif; font-weight: 600; font-size: 0.88rem; border: 1px solid #0b1526; border-radius: 10px; cursor: pointer; } .ds-btn-chrome:hover { background: #111d33; color: #c9a84c; } .ds-btn-chrome:focus-visible { outline: 2px solid #c9a84c; outline-offset: 3px; }"
+    },
+    {
+      "name": "Search input",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Toolbar search field with gold focus border.",
+      "html": "<input class=\"ds-input-search\" type=\"search\" placeholder=\"جستجو…\" />",
+      "css": ".ds-input-search { width: 100%; min-height: 44px; padding: 0.75rem 1rem; background: #ffffff; color: #1a1a1a; font-family: Vazirmatn, system-ui, sans-serif; font-size: 0.95rem; border: 1px solid #e2e8f0; border-radius: 10px; } .ds-input-search:focus { outline: none; border-color: #c9a84c; } .ds-input-search:focus-visible { outline: 2px solid #c9a84c; outline-offset: 3px; box-shadow: 0 0 0 3px rgba(201,168,76,0.45); }"
+    },
+    {
+      "name": "Language chip",
+      "kind": "chip",
+      "refersTo": "chip-selected",
+      "description": "FA/EN pill; selected state uses Lamp Gold.",
+      "html": "<div class=\"ds-lang\" role=\"group\"><button class=\"ds-lang-btn ds-lang-on\" type=\"button\">FA</button><button class=\"ds-lang-btn\" type=\"button\">EN</button></div>",
+      "css": ".ds-lang { display: inline-flex; border: 1px solid rgba(201,168,76,0.35); border-radius: 999px; overflow: hidden; background: #0b1526; } .ds-lang-btn { padding: 0.35rem 0.7rem; min-height: 32px; background: transparent; color: rgba(255,255,255,0.72); font-family: Vazirmatn, system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; border: none; cursor: pointer; } .ds-lang-on { background: #c9a84c; color: #0b1526; } .ds-lang-btn:focus-visible { outline: 2px solid #c9a84c; outline-offset: 1px; }"
+    },
+    {
+      "name": "Section card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Home section card — white paper, hairline border, gold-dim icon well.",
+      "html": "<a class=\"ds-sec-card\" href=\"#\"><span class=\"ds-sec-ico\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"28\" height=\"28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M6 4h9a2 2 0 0 1 2 2v14l-4-2-4 2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12\"/><path d=\"M9 8h6M9 12h4\"/></svg></span><h3 class=\"ds-sec-title\">خطبه‌ها</h3><p class=\"ds-sec-copy\">سخنان بلیغ و عمیق</p><span class=\"ds-sec-link\">مشاهده</span></a>",
+      "css": ".ds-sec-card { display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none; background: #ffffff; color: #0b1526; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1.85rem 1.5rem 1.6rem; box-shadow: 0 4px 24px rgba(11,21,38,0.08); transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; } .ds-sec-card:hover { transform: translateY(-3px); border-color: rgba(201,168,76,0.4); box-shadow: 0 8px 32px rgba(11,21,38,0.12); } .ds-sec-ico { display: grid; place-items: center; width: 3rem; height: 3rem; margin-bottom: 0.85rem; border-radius: 12px; background: rgba(201,168,76,0.15); color: #0b1526; } .ds-sec-title { margin: 0 0 0.35rem; font-family: Vazirmatn, system-ui, sans-serif; font-size: 1.2rem; font-weight: 700; } .ds-sec-copy { margin: 0 0 0.9rem; color: #4a5568; font-size: 0.92rem; } .ds-sec-link { font-weight: 600; font-size: 0.9rem; color: #0b1526; } .ds-sec-card:hover .ds-sec-link { color: #c9a84c; } .ds-sec-card:focus-visible { outline: 2px solid #c9a84c; outline-offset: 3px; }"
+    },
+    {
+      "name": "Quote box",
+      "kind": "custom",
+      "refersTo": "card-surface",
+      "description": "Selected saying — Amiri Arabic with muted caption.",
+      "html": "<figure class=\"ds-quote\"><blockquote>قِيمَةُ كُلِّ امْرِئٍ مَا يُحْسِنُهُ</blockquote><figcaption>ارزش هر کس به همان است که نیکو می‌داند</figcaption></figure>",
+      "css": ".ds-quote { margin: 0; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1.35rem 1.3rem; color: #0b1526; } .ds-quote blockquote { margin: 0; font-family: Amiri, Georgia, serif; font-size: 1.15rem; line-height: 1.95; } .ds-quote figcaption { margin-top: 0.75rem; font-family: Vazirmatn, system-ui, sans-serif; font-size: 0.9rem; line-height: 1.75; color: #4a5568; }"
+    },
+    {
+      "name": "Topbar nav",
+      "kind": "nav",
+      "refersTo": "nav-link-active",
+      "description": "Sticky navy chrome with brand mark and active gold link.",
+      "html": "<header class=\"ds-topbar\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-brand-icon\" aria-hidden=\"true\">ن</span> نهج البلاغه</a><nav><a class=\"ds-nav-link ds-nav-on\" href=\"#\">خانه</a><a class=\"ds-nav-link\" href=\"#\">خطبه‌ها</a></nav></header>",
+      "css": ".ds-topbar { display: flex; align-items: center; gap: 1rem; height: 64px; padding: 0 1.25rem; background: #0b1526; color: #e8d5a3; font-family: Vazirmatn, system-ui, sans-serif; } .ds-brand { display: inline-flex; align-items: center; gap: 0.6rem; color: #e8d5a3; font-weight: 700; font-size: 1.05rem; text-decoration: none; } .ds-brand-icon { width: 36px; height: 36px; border-radius: 10px; background: #c9a84c; color: #0b1526; display: grid; place-items: center; font-family: Amiri, Georgia, serif; font-size: 1.2rem; font-weight: 700; } .ds-nav-link { color: rgba(255,255,255,0.75); padding: 0.45rem 0.85rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500; text-decoration: none; } .ds-nav-link:hover, .ds-nav-on { color: #c9a84c; background: rgba(201,168,76,0.12); } .ds-nav-link:focus-visible { outline: 2px solid #c9a84c; outline-offset: 3px; }"
+    },
+    {
+      "name": "Hikam card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Wisdom card with gold number, Amiri Arabic, dashed translation.",
+      "html": "<article class=\"ds-hikam\"><div class=\"ds-hikam-num\">حکمت ۱</div><p class=\"ds-hikam-ar\">قِيمَةُ كُلِّ امْرِئٍ مَا يُحْسِنُهُ</p><p class=\"ds-hikam-tr\">ارزش هر کس به همان است که نیکو می‌داند</p></article>",
+      "css": ".ds-hikam { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1.25rem 1.35rem; box-shadow: 0 4px 24px rgba(11,21,38,0.08); } .ds-hikam:hover { border-color: rgba(201,168,76,0.45); } .ds-hikam-num { font-family: Vazirmatn, system-ui, sans-serif; font-size: 0.8rem; font-weight: 600; color: #c9a84c; margin-bottom: 0.5rem; } .ds-hikam-ar { margin: 0 0 12px; font-family: Amiri, Georgia, serif; font-size: 1.2rem; line-height: 2; color: #0b1526; } .ds-hikam-tr { margin: 0; font-family: Vazirmatn, system-ui, sans-serif; font-size: 0.95rem; line-height: 1.95; color: #3d4654; border-top: 1px dashed #e2e8f0; padding-top: 12px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Gold-Lamped Lectern",
+    "overview": "The site reads like a quiet lectern under a single warm lamp: a dark Manuscript Navy frame (topbar and footer) holds a soft Parchment Cream page, and Lamp Gold appears only where attention or action is required. Personality is calm and dignified—built for long bilingual reading, not marketing spectacle. Form language is refined and restrained—paper-white surfaces, soft radii, calm hairline borders. Confirmed visual anti-references: generic AI cream + terracotta serif landings, and dashboard / SaaS chrome.",
+    "keyCharacteristics": [
+      "Navy chrome + parchment page + scarce lamp gold",
+      "Amiri for Arabic literary text; Vazirmatn for UI and Persian body",
+      "Soft radii; prefer border/tone over heavy shadow",
+      "Bilingual FA/EN with RTL-first defaults",
+      "Static HTML/CSS patterns reusable across list, quote, and letter pages"
+    ],
+    "rules": [
+      { "name": "The Scarce Lamp Rule", "body": "Lamp Gold occupies a small fraction of any screen. If gold is everywhere, the lectern has no light—only glare.", "section": "colors" },
+      { "name": "The Parchment Pairing Rule", "body": "Cream is allowed only as the page ground paired with Manuscript Navy and Lamp Gold. Never restyle cream into a warm terracotta/serif AI landing lookalike.", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "Arabic literary content speaks in Amiri; chrome and Persian UI speak in Vazirmatn. Do not reverse them for decoration.", "section": "typography" },
+      { "name": "The Quiet Surface Rule", "body": "Default surfaces are flat paper on parchment. Shadows answer interaction or sticky chrome—they are not the identity.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep Manuscript Navy / Lamp Gold / Parchment Cream as the only core triad.",
+      "Do set Arabic literary text in Amiri and UI/Persian in Vazirmatn.",
+      "Do design FA RTL first; mirror carefully for EN LTR.",
+      "Do prefer hairline borders and tonal washes over heavy drop shadows.",
+      "Do use Lamp Gold for primary action and focus—and rarely elsewhere.",
+      "Do use consistent stroke SVG icons in gold-dim wells."
+    ],
+    "donts": [
+      "Don't drift into generic cream + terracotta + display-serif AI landing aesthetics.",
+      "Don't introduce dashboard/SaaS chrome (dense metric cards, purple gradients, neon glow).",
+      "Don't use emoji or Unicode symbols as the icon system (including ☰ / 🔊 as permanent UI).",
+      "Don't invent kickers/eyebrows above headings; headings carry their own weight.",
+      "Don't invent sermons, letters, sayings, or attributions for visual filler.",
+      "Don't flood screens with gold or stack nested cards for decoration."
+    ]
+  }
+}
